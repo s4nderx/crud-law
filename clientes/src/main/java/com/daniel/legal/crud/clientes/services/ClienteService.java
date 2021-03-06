@@ -1,66 +1,21 @@
 package com.daniel.legal.crud.clientes.services;
 
 import com.daniel.legal.crud.clientes.entities.Cliente;
-import com.daniel.legal.crud.clientes.repository.ClienteRepository;
-import com.daniel.legal.crud.clientes.services.excepitions.DataBaseException;
-import com.daniel.legal.crud.clientes.services.excepitions.ResourceNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
+public interface ClienteService {
 
-@Service
-public class ClienteService {
+    public Cliente cadastrar(Cliente cliente);
 
-    @Autowired
-    public ClienteRepository repository;
+    public Cliente alterar(Long id, Cliente newCliente);
 
-    @Transactional
-    public Cliente cadastrar(Cliente cliente){
-        return this.repository.save(cliente);
-    }
+    public void deletar(Long id);
 
-    @Transactional
-    public Cliente alterar(Long id, Cliente newCliente){
+    public Page<Cliente> search(String cpf, String nome, PageRequest pageRequest);
 
-        try {
-
-            Cliente cliente = this.repository.getOne(id);
-            newCliente.setId(id);
-            return this.repository.save(newCliente);
-
-        }catch (EntityNotFoundException ex){
-            throw new ResourceNotFoundException("Id não encontrado " + id);
-        }
-
-    }
-
-    @Transactional
-    public void deletar(Long id){
-        this.repository.deleteById(id);
-    }
-
-    @Transactional
-    public Page<Cliente> search(String cpf, String nome, PageRequest pageRequest){
-        return this.repository.search(cpf, nome, pageRequest);
-    }
-
-    @Transactional(rollbackFor = Exception.class)
-    public void excluirEmLote(List<Cliente> clientes){
-
-        try {
-            this.repository.deleteAll(clientes);
-        } catch (Exception e) {
-            throw new DataBaseException("Erro ao deletar em lote");
-        }
-
-    }
+    public void excluirEmLote(List<Cliente> clientes);
 
 }

@@ -2,6 +2,7 @@ package com.daniel.legal.crud.clientes.controllers;
 
 import com.daniel.legal.crud.clientes.entities.Cliente;
 import com.daniel.legal.crud.clientes.services.ClienteService;
+import com.daniel.legal.crud.clientes.services.ClienteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -25,8 +26,8 @@ public class ClienteController {
             @RequestParam(value = "page", defaultValue = "0") Integer page,
             @RequestParam(value = "size", defaultValue = "12") Integer linesPerPage,
             @RequestParam(value = "direction", defaultValue = "ASC") String direction,
-            @RequestParam(value = "orderBy", defaultValue = "name") String orderBy,
-            @RequestParam(value = "cpf", defaultValue = "", required = false) String cpf,
+            @RequestParam(value = "orderBy", defaultValue = "nome") String orderBy,
+            @RequestParam(value = "cpf", required = false) String cpf,
             @RequestParam(value = "nome", defaultValue = "", required = false) String nome
     ){
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);

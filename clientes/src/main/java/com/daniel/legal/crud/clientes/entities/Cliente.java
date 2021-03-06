@@ -27,10 +27,10 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(Long id, String cpf, String name, String email, LocalDate nascimento, Sexo sexo, EstadoCivil estadoCivil) {
+    public Cliente(Long id, String cpf, String nome, String email, LocalDate nascimento, Sexo sexo, EstadoCivil estadoCivil) {
         this.id = id;
         this.cpf = cpf;
-        this.nome = name;
+        this.nome = nome;
         this.email = email;
         this.nascimento = nascimento;
         this.sexo = sexo;
@@ -57,8 +57,8 @@ public class Cliente {
         return nome;
     }
 
-    public void setNome(String name) {
-        this.nome = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {
