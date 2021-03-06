@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link href="./style.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadasro de Clientes</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <div class="container">
+                <a class="navbar-brand" href="#">Clientes Daniel Legal</a>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Listar</a>
+                        </li>
+                    </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container main-container">
+      <h1>Cadastro de Clientes</h1>
+    
+      <form>
+
+          <hr>
+
+              
+          <div class="form-group">
+            <label class="col-md-2 control-label">Nome</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)" />
+            </div>
+          </div>
+    
+          <div class="form-group">
+              <label class="col-md-2 control-label">E-mail</label>
+              <div class="col-md-10">
+                  <input class="form-control" id="email" type="text" placeholder="E-mail (requerido)" />
+              </div>
+          </div>
+
+              
+          <div class="form-group">
+            <label class="col-md-2 control-label">Cpf</label>
+            <div class="col-md-10">
+                <input class="form-control" id="cpf" type="text" placeholder="Cpf (requerido)" />
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label class="col-md-4 control-label">Data de Nascimento</label>
+            <div class="col-md-10">
+                <input class="form-control" id="cpf" type="text" placeholder="Cpf (requerido)" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label">Sexo</label>
+            <div class="row">
+                <div class="col-md-10 ml-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                          Feminino
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option2">
+                        <label class="form-check-label" for="gridRadios1">
+                          Masculino
+                        </label>
+                      </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label">Estado Civil</label>
+            <div class="ml-3">
+                <select id="inputState" class="form-control">
+                    <option selected>Solteiro</option>
+                    <option selected>Casado</option>
+                    <option selected>Divorciado</option>
+                </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class=" form-check ml-3">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Ativo?
+                </label>
+            </div>
+          </div>
+    
+          <div class="form-group">
+              <div class="col-md-4 col-md-offset-2">
+                  <span><button class="btn btn-success" id="Registrar" type="submit">Registrar</button></span>
+              </div>
+          </div>
+      </form>
+    </div> 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+</body>
+
+<footer class="border-top footer text-muted">
+    <div class="container text-center">
+        Daniel Legal & IP Strategy
+    </div>
+</footer>
+
+</html>
