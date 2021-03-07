@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/head :: header-css"></div>
+    <title>Cadasro de Clientes</title>
+</head>
+<body>
+<div th:replace="fragments/header :: menu"></div>
+<div class="container main-container">
+    <h1>Cadastro de Clientes</h1>
+
+    <form>
+
+        <hr>
+
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Nome</label>
+            <div class="col-md-5">
+                <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">E-mail</label>
+            <div class="col-md-5">
+                <input class="form-control" id="email" type="text" placeholder="E-mail (requerido)" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Cpf</label>
+            <div class="col-md-5">
+                <input class="form-control" id="cpf" type="text" placeholder="Cpf (requerido)" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Data de Nascimento</label>
+            <div class="col-md-5">
+                <input class="form-control" id="cpf" type="text" placeholder="Cpf (requerido)" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Sexo</label>
+            <div class="row">
+                <div class="col-md-10 ml-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Feminino
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option2">
+                        <label class="form-check-label" for="gridRadios1">
+                            Masculino
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4">Estado Civil</label>
+            <div class="col-md-5">
+                <select id="inputState" class="form-control">
+                    <option selected>Solteiro</option>
+                    <option selected>Casado</option>
+                    <option selected>Divorciado</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" form-check ml-3">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Ativo?
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span><button class="btn btn-success" id="Registrar" type="submit">Registrar</button></span>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</html>
